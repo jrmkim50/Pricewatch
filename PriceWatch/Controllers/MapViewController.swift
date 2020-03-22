@@ -11,7 +11,11 @@ import MapKit
 import CoreLocation
 import MapKitSearchView
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+protocol HandleMapSearch {
+    func dropPinZoomIn(placemark:MKPlacemark)
+}
+
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, HandleMapSearch {
 
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var nextPage: UIButton!
@@ -27,7 +31,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     var currentAnnotation: MKPointAnnotation? = nil
     var tapGestureRecognizer: UITapGestureRecognizer?
     var previousLocation: CLLocation? = nil
-    
+//----------------------------------------------------------------
+    var resultSearchController:UISearchController? = nil
+    var selectedPin:MKPlacemark? = nil
+    var searchBar: UISearchBar?
+//----------------------------------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
         nextPage.alpha = 0
@@ -38,6 +46,39 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+//----------------------------------------------------------------
+        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
+        resultSearchController = UISearchController(searchResultsController: locationSearchTable)
+        resultSearchController?.searchResultsUpdater = locationSearchTable
+        searchBar = resultSearchController!.searchBar
+        searchBar!.isHidden = true
+        searchBar!.sizeToFit()
+        searchBar!.placeholder = "Search for places"
+        navigationItem.titleView = resultSearchController?.searchBar
+        resultSearchController?.hidesNavigationBarDuringPresentation = false
+        resultSearchController?.dimsBackgroundDuringPresentation = true
+        definesPresentationContext = true
+        locationSearchTable.mapView = map
+        locationSearchTable.handleMapSearchDelegate = self
+//----------------------------------------------------------------
+
+    }
+    
+    func dropPinZoomIn(placemark:MKPlacemark){
+        selectedPin = placemark
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = placemark.coordinate
+        annotation.title = placemark.name
+        if let city = placemark.locality,
+        let state = placemark.administrativeArea {
+            annotation.subtitle = "\(city) \(state)"
+        }
+        map.addAnnotation(annotation)
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let region = MKCoordinateRegion(center: placemark.coordinate, span: span)
+        map.setRegion(region, animated: true)
+        currentAnnotation = annotation
+        searchBar!.isHidden = true
     }
     
     func resetMap() {
@@ -53,6 +94,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             let mapTapGestureRecognizer = MapTapGestureRecognizer(target: self, action: #selector(MapViewController.seeDetails(gestureRecognizer:)))
             if let annotation = annotation as? PointAnnotation {
                 mapTapGestureRecognizer.key = annotation.key
+            } else {
+                pinView.pinTintColor = UIColor.blue
             }
             rightButton.addGestureRecognizer(mapTapGestureRecognizer)
             rightButton.tag = annotation.hash
@@ -102,6 +145,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     @IBAction func createPost(_ sender: Any) {
+        searchBar!.isHidden = false
         nextPage.alpha = 1
         cancelButton.alpha = 1
         if (UserService.userOnBoarding()) {
@@ -132,6 +176,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             map.removeAnnotation(annotation)
             currentAnnotation = nil
         }
+        searchBar!.isHidden = true
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

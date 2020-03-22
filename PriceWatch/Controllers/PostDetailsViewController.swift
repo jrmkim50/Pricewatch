@@ -63,7 +63,6 @@ class PostDetailsViewController: UIViewController, GADBannerViewDelegate {
     }
     
     @IBAction func upvote(_ sender: Any) {
-//        self.likeButton.isUserInteractionEnabled = !(post!).isLiked
         LikeService.setIsLiked(!(post!.isLiked), for: post!) { (success) in
             guard success else { return }
             self.postUpvotes+=1
@@ -75,7 +74,6 @@ class PostDetailsViewController: UIViewController, GADBannerViewDelegate {
     }
     
     @IBAction func downvote(_ sender: Any) {
-//        self.dislikeButton.isUserInteractionEnabled = !(post!).isDisliked
         LikeService.setIsDisliked(!(post!.isDisliked), for: post!) { (success) in
             print(success)
             guard success else { return }
