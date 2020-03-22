@@ -3,18 +3,49 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		098B557F663766725E2038D2 /* Pods_PriceWatch_PriceWatchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73903E24EE44D58BBB7F28FA /* Pods_PriceWatch_PriceWatchUITests.framework */; };
+		3915046A2425B43400B8904D /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391504692425B43400B8904D /* LikeService.swift */; };
+		391B7ADE2423C4510028CABB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B7ADD2423C4510028CABB /* MapViewController.swift */; };
+		391B7AE02423C5890028CABB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391B7ADF2423C5890028CABB /* CoreLocation.framework */; };
+		391B7AE22423C7400028CABB /* PWMapHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B7AE12423C7400028CABB /* PWMapHelper.swift */; };
+		391B7AE42423E00A0028CABB /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B7AE32423E00A0028CABB /* StorageService.swift */; };
+		391B7AE62423E19E0028CABB /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B7AE52423E19E0028CABB /* PostService.swift */; };
+		391B7AE82423E2050028CABB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B7AE72423E2050028CABB /* Post.swift */; };
+		391B7AEA2423E53B0028CABB /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B7AE92423E53B0028CABB /* UIImage+Size.swift */; };
+		391B7AEC2423E58C0028CABB /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B7AEB2423E58C0028CABB /* StorageReference+Post.swift */; };
+		391B7AEE242411F70028CABB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B7AED242411F70028CABB /* SettingsViewController.swift */; };
+		3926A29E24208EBE00D23F02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3926A29D24208EBE00D23F02 /* Main.storyboard */; };
+		3926A2A02420918000D23F02 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3926A29F2420918000D23F02 /* Login.storyboard */; };
 		3927EF3D241DE8A2006C85F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3927EF3C241DE8A2006C85F2 /* AppDelegate.swift */; };
 		3927EF3F241DE8A2006C85F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3927EF3E241DE8A2006C85F2 /* SceneDelegate.swift */; };
 		3927EF41241DE8A2006C85F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3927EF40241DE8A2006C85F2 /* ViewController.swift */; };
-		3927EF44241DE8A2006C85F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3927EF42241DE8A2006C85F2 /* Main.storyboard */; };
 		3927EF46241DE8A5006C85F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3927EF45241DE8A5006C85F2 /* Assets.xcassets */; };
 		3927EF49241DE8A5006C85F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3927EF47241DE8A5006C85F2 /* LaunchScreen.storyboard */; };
 		3927EF54241DE8A5006C85F2 /* PriceWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3927EF53241DE8A5006C85F2 /* PriceWatchTests.swift */; };
 		3927EF5F241DE8A5006C85F2 /* PriceWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3927EF5E241DE8A5006C85F2 /* PriceWatchUITests.swift */; };
+		392E93C9242538FC00EFFFDF /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392E93C8242538FC00EFFFDF /* PostDetailsViewController.swift */; };
+		392E93CB24253C1000EFFFDF /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392E93CA24253C1000EFFFDF /* Annotation.swift */; };
+		392E93CD2425463F00EFFFDF /* MapTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392E93CC2425463F00EFFFDF /* MapTapGestureRecognizer.swift */; };
+		392E93CF24256D3700EFFFDF /* UploadStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392E93CE24256D3700EFFFDF /* UploadStatus.swift */; };
+		39DA4DD82423113D00BFA7AD /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DA4DD72423113D00BFA7AD /* CreatePostViewController.swift */; };
+		39DA4DDC24231DA700BFA7AD /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DA4DDB24231DA700BFA7AD /* BorderView.swift */; };
+		39DA4DDE2423273A00BFA7AD /* PWPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DA4DDD2423273A00BFA7AD /* PWPhotoHelper.swift */; };
+		39DA4DE024232F9F00BFA7AD /* Todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 39DA4DDF24232F9F00BFA7AD /* Todo.txt */; };
+		39EB29162421716F00AFE73F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39EB29152421716F00AFE73F /* GoogleService-Info.plist */; };
+		39EB2918242178EE00AFE73F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EB2917242178EE00AFE73F /* RegistrationViewController.swift */; };
+		39EB291B2421810400AFE73F /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EB291A2421810400AFE73F /* TextField.swift */; };
+		39EB291D24218C4300AFE73F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EB291C24218C4300AFE73F /* User.swift */; };
+		39EB291F2421915A00AFE73F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EB291E2421915A00AFE73F /* SignInViewController.swift */; };
+		39EB2923242194BE00AFE73F /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EB2922242194BE00AFE73F /* StartupViewController.swift */; };
+		39EB29252421B96000AFE73F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EB29242421B96000AFE73F /* UserService.swift */; };
+		39EB29272421E22F00AFE73F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EB29262421E22F00AFE73F /* Constants.swift */; };
+		39EB29292421E27500AFE73F /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EB29282421E27500AFE73F /* Storyboard+Utility.swift */; };
+		B149B49B7B25C07EDDDB7C5D /* Pods_PriceWatchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC0BBD8F388EFAEB198D6DA /* Pods_PriceWatchTests.framework */; };
+		D1BE70957298F48BDC19515B /* Pods_PriceWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C6C28421217B2E15541DBB /* Pods_PriceWatch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +65,38 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3926B9DD2420CBFC00529810 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1B1EBDD5842AC1DA9B8F2BA4 /* Pods-PriceWatch-PriceWatchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceWatch-PriceWatchUITests.debug.xcconfig"; path = "Target Support Files/Pods-PriceWatch-PriceWatchUITests/Pods-PriceWatch-PriceWatchUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1CC0BBD8F388EFAEB198D6DA /* Pods_PriceWatchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PriceWatchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24C6C28421217B2E15541DBB /* Pods_PriceWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PriceWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		391504692425B43400B8904D /* LikeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeService.swift; sourceTree = "<group>"; };
+		391B7ADD2423C4510028CABB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		391B7ADF2423C5890028CABB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		391B7AE12423C7400028CABB /* PWMapHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWMapHelper.swift; sourceTree = "<group>"; };
+		391B7AE32423E00A0028CABB /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		391B7AE52423E19E0028CABB /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		391B7AE72423E2050028CABB /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		391B7AE92423E53B0028CABB /* UIImage+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Size.swift"; sourceTree = "<group>"; };
+		391B7AEB2423E58C0028CABB /* StorageReference+Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageReference+Post.swift"; sourceTree = "<group>"; };
+		391B7AED242411F70028CABB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3926A29D24208EBE00D23F02 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3926A29F2420918000D23F02 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3927EF39241DE8A2006C85F2 /* PriceWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PriceWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3927EF3C241DE8A2006C85F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3927EF3E241DE8A2006C85F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3927EF40241DE8A2006C85F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3927EF43241DE8A2006C85F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3927EF45241DE8A5006C85F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3927EF48241DE8A5006C85F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3927EF4A241DE8A5006C85F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +106,29 @@
 		3927EF5A241DE8A5006C85F2 /* PriceWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PriceWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3927EF5E241DE8A5006C85F2 /* PriceWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceWatchUITests.swift; sourceTree = "<group>"; };
 		3927EF60241DE8A5006C85F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		392E93C8242538FC00EFFFDF /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
+		392E93CA24253C1000EFFFDF /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		392E93CC2425463F00EFFFDF /* MapTapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTapGestureRecognizer.swift; sourceTree = "<group>"; };
+		392E93CE24256D3700EFFFDF /* UploadStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadStatus.swift; sourceTree = "<group>"; };
+		39DA4DD72423113D00BFA7AD /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		39DA4DDB24231DA700BFA7AD /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
+		39DA4DDD2423273A00BFA7AD /* PWPhotoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWPhotoHelper.swift; sourceTree = "<group>"; };
+		39DA4DDF24232F9F00BFA7AD /* Todo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Todo.txt; sourceTree = "<group>"; };
+		39EB29152421716F00AFE73F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		39EB2917242178EE00AFE73F /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		39EB291A2421810400AFE73F /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		39EB291C24218C4300AFE73F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		39EB291E2421915A00AFE73F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		39EB2922242194BE00AFE73F /* StartupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
+		39EB29242421B96000AFE73F /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		39EB29262421E22F00AFE73F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		39EB29282421E27500AFE73F /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
+		5B1E7753CED5BCFB5DBE71A5 /* Pods-PriceWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceWatch.debug.xcconfig"; path = "Target Support Files/Pods-PriceWatch/Pods-PriceWatch.debug.xcconfig"; sourceTree = "<group>"; };
+		6FE2C14EFDE27630BF6A833B /* Pods-PriceWatchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceWatchTests.debug.xcconfig"; path = "Target Support Files/Pods-PriceWatchTests/Pods-PriceWatchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		73903E24EE44D58BBB7F28FA /* Pods_PriceWatch_PriceWatchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PriceWatch_PriceWatchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CF7785BB8C2BAD362584B84 /* Pods-PriceWatchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceWatchTests.release.xcconfig"; path = "Target Support Files/Pods-PriceWatchTests/Pods-PriceWatchTests.release.xcconfig"; sourceTree = "<group>"; };
+		9CCDED24805927F32D3631B2 /* Pods-PriceWatch-PriceWatchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceWatch-PriceWatchUITests.release.xcconfig"; path = "Target Support Files/Pods-PriceWatch-PriceWatchUITests/Pods-PriceWatch-PriceWatchUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B2FF9C1D7587D02421C3AD34 /* Pods-PriceWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceWatch.release.xcconfig"; path = "Target Support Files/Pods-PriceWatch/Pods-PriceWatch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +136,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				391B7AE02423C5890028CABB /* CoreLocation.framework in Frameworks */,
+				D1BE70957298F48BDC19515B /* Pods_PriceWatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B149B49B7B25C07EDDDB7C5D /* Pods_PriceWatchTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +153,98 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				098B557F663766725E2038D2 /* Pods_PriceWatch_PriceWatchUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3926A28F2420854700D23F02 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3927EF40241DE8A2006C85F2 /* ViewController.swift */,
+				39EB2917242178EE00AFE73F /* RegistrationViewController.swift */,
+				39EB291E2421915A00AFE73F /* SignInViewController.swift */,
+				39EB2922242194BE00AFE73F /* StartupViewController.swift */,
+				39DA4DD72423113D00BFA7AD /* CreatePostViewController.swift */,
+				391B7ADD2423C4510028CABB /* MapViewController.swift */,
+				391B7AED242411F70028CABB /* SettingsViewController.swift */,
+				392E93C8242538FC00EFFFDF /* PostDetailsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3926A2902420855000D23F02 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				39EB29282421E27500AFE73F /* Storyboard+Utility.swift */,
+				391B7AE92423E53B0028CABB /* UIImage+Size.swift */,
+				391B7AEB2423E58C0028CABB /* StorageReference+Post.swift */,
+				392E93CA24253C1000EFFFDF /* Annotation.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3926A2912420855400D23F02 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				39DA4DDD2423273A00BFA7AD /* PWPhotoHelper.swift */,
+				391B7AE12423C7400028CABB /* PWMapHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3926A2922420855900D23F02 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				39EB291C24218C4300AFE73F /* User.swift */,
+				391B7AE72423E2050028CABB /* Post.swift */,
+				392E93CE24256D3700EFFFDF /* UploadStatus.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3926A2932420855C00D23F02 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				39EB29242421B96000AFE73F /* UserService.swift */,
+				391B7AE32423E00A0028CABB /* StorageService.swift */,
+				391B7AE52423E19E0028CABB /* PostService.swift */,
+				391504692425B43400B8904D /* LikeService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3926A2942420856100D23F02 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3927EF47241DE8A5006C85F2 /* LaunchScreen.storyboard */,
+				3926A29D24208EBE00D23F02 /* Main.storyboard */,
+				3926A29F2420918000D23F02 /* Login.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3926A2952420856900D23F02 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				3927EF4A241DE8A5006C85F2 /* Info.plist */,
+				39EB29262421E22F00AFE73F /* Constants.swift */,
+				392E93CC2425463F00EFFFDF /* MapTapGestureRecognizer.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		3926A2962420856D00D23F02 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				39EB291A2421810400AFE73F /* TextField.swift */,
+				39DA4DDB24231DA700BFA7AD /* BorderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		3927EF30241DE8A2006C85F2 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +252,8 @@
 				3927EF52241DE8A5006C85F2 /* PriceWatchTests */,
 				3927EF5D241DE8A5006C85F2 /* PriceWatchUITests */,
 				3927EF3A241DE8A2006C85F2 /* Products */,
+				557E8AFD687FC458F12F0152 /* Pods */,
+				63A9D49DB5E03FF38A0FA4DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +270,19 @@
 		3927EF3B241DE8A2006C85F2 /* PriceWatch */ = {
 			isa = PBXGroup;
 			children = (
+				3926A2962420856D00D23F02 /* Views */,
+				3926A2952420856900D23F02 /* Supporting */,
+				3926A2942420856100D23F02 /* Storyboards */,
+				3926A2932420855C00D23F02 /* Services */,
+				3926A2922420855900D23F02 /* Models */,
+				3926A2912420855400D23F02 /* Helpers */,
+				3926A2902420855000D23F02 /* Extensions */,
+				3926A28F2420854700D23F02 /* Controllers */,
 				3927EF3C241DE8A2006C85F2 /* AppDelegate.swift */,
 				3927EF3E241DE8A2006C85F2 /* SceneDelegate.swift */,
-				3927EF40241DE8A2006C85F2 /* ViewController.swift */,
-				3927EF42241DE8A2006C85F2 /* Main.storyboard */,
+				39EB29152421716F00AFE73F /* GoogleService-Info.plist */,
 				3927EF45241DE8A5006C85F2 /* Assets.xcassets */,
-				3927EF47241DE8A5006C85F2 /* LaunchScreen.storyboard */,
-				3927EF4A241DE8A5006C85F2 /* Info.plist */,
+				39DA4DDF24232F9F00BFA7AD /* Todo.txt */,
 			);
 			path = PriceWatch;
 			sourceTree = "<group>";
@@ -128,6 +305,30 @@
 			path = PriceWatchUITests;
 			sourceTree = "<group>";
 		};
+		557E8AFD687FC458F12F0152 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B1E7753CED5BCFB5DBE71A5 /* Pods-PriceWatch.debug.xcconfig */,
+				B2FF9C1D7587D02421C3AD34 /* Pods-PriceWatch.release.xcconfig */,
+				1B1EBDD5842AC1DA9B8F2BA4 /* Pods-PriceWatch-PriceWatchUITests.debug.xcconfig */,
+				9CCDED24805927F32D3631B2 /* Pods-PriceWatch-PriceWatchUITests.release.xcconfig */,
+				6FE2C14EFDE27630BF6A833B /* Pods-PriceWatchTests.debug.xcconfig */,
+				8CF7785BB8C2BAD362584B84 /* Pods-PriceWatchTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		63A9D49DB5E03FF38A0FA4DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				391B7ADF2423C5890028CABB /* CoreLocation.framework */,
+				24C6C28421217B2E15541DBB /* Pods_PriceWatch.framework */,
+				73903E24EE44D58BBB7F28FA /* Pods_PriceWatch_PriceWatchUITests.framework */,
+				1CC0BBD8F388EFAEB198D6DA /* Pods_PriceWatchTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +336,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3927EF63241DE8A5006C85F2 /* Build configuration list for PBXNativeTarget "PriceWatch" */;
 			buildPhases = (
+				C16841F066F59F57E6928176 /* [CP] Check Pods Manifest.lock */,
+				3926B9DD2420CBFC00529810 /* CopyFiles */,
 				3927EF35241DE8A2006C85F2 /* Sources */,
 				3927EF36241DE8A2006C85F2 /* Frameworks */,
 				3927EF37241DE8A2006C85F2 /* Resources */,
+				398378B57DE12C48976ED7F4 /* [CP] Embed Pods Frameworks */,
+				2964D4395D5AD546FCEF59B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +357,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3927EF66241DE8A5006C85F2 /* Build configuration list for PBXNativeTarget "PriceWatchTests" */;
 			buildPhases = (
+				B3050E58FFDEE028926554DE /* [CP] Check Pods Manifest.lock */,
 				3927EF4B241DE8A5006C85F2 /* Sources */,
 				3927EF4C241DE8A5006C85F2 /* Frameworks */,
 				3927EF4D241DE8A5006C85F2 /* Resources */,
@@ -170,9 +376,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3927EF69241DE8A5006C85F2 /* Build configuration list for PBXNativeTarget "PriceWatchUITests" */;
 			buildPhases = (
+				FEA8E9F75B15437224C562CB /* [CP] Check Pods Manifest.lock */,
 				3927EF56241DE8A5006C85F2 /* Sources */,
 				3927EF57241DE8A5006C85F2 /* Frameworks */,
 				3927EF58241DE8A5006C85F2 /* Resources */,
+				AE75933D5CBDFF71675DA949 /* [CP] Embed Pods Frameworks */,
+				A97D10B851723D83C9A917EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,8 +442,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3927EF49241DE8A5006C85F2 /* LaunchScreen.storyboard in Resources */,
+				3926A29E24208EBE00D23F02 /* Main.storyboard in Resources */,
+				39DA4DE024232F9F00BFA7AD /* Todo.txt in Resources */,
+				39EB29162421716F00AFE73F /* GoogleService-Info.plist in Resources */,
+				3926A2A02420918000D23F02 /* Login.storyboard in Resources */,
 				3927EF46241DE8A5006C85F2 /* Assets.xcassets in Resources */,
-				3927EF44241DE8A2006C85F2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,14 +466,175 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2964D4395D5AD546FCEF59B8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PriceWatch/Pods-PriceWatch-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PriceWatch/Pods-PriceWatch-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PriceWatch/Pods-PriceWatch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		398378B57DE12C48976ED7F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PriceWatch/Pods-PriceWatch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PriceWatch/Pods-PriceWatch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PriceWatch/Pods-PriceWatch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A97D10B851723D83C9A917EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PriceWatch-PriceWatchUITests/Pods-PriceWatch-PriceWatchUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PriceWatch-PriceWatchUITests/Pods-PriceWatch-PriceWatchUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PriceWatch-PriceWatchUITests/Pods-PriceWatch-PriceWatchUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE75933D5CBDFF71675DA949 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PriceWatch-PriceWatchUITests/Pods-PriceWatch-PriceWatchUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PriceWatch-PriceWatchUITests/Pods-PriceWatch-PriceWatchUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PriceWatch-PriceWatchUITests/Pods-PriceWatch-PriceWatchUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3050E58FFDEE028926554DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PriceWatchTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C16841F066F59F57E6928176 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PriceWatch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEA8E9F75B15437224C562CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PriceWatch-PriceWatchUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3927EF35241DE8A2006C85F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39EB2923242194BE00AFE73F /* StartupViewController.swift in Sources */,
+				391B7AE22423C7400028CABB /* PWMapHelper.swift in Sources */,
 				3927EF41241DE8A2006C85F2 /* ViewController.swift in Sources */,
+				39EB29252421B96000AFE73F /* UserService.swift in Sources */,
 				3927EF3D241DE8A2006C85F2 /* AppDelegate.swift in Sources */,
+				39EB291B2421810400AFE73F /* TextField.swift in Sources */,
+				39EB29292421E27500AFE73F /* Storyboard+Utility.swift in Sources */,
+				391B7AE62423E19E0028CABB /* PostService.swift in Sources */,
+				39EB29272421E22F00AFE73F /* Constants.swift in Sources */,
+				392E93CD2425463F00EFFFDF /* MapTapGestureRecognizer.swift in Sources */,
+				39EB291F2421915A00AFE73F /* SignInViewController.swift in Sources */,
 				3927EF3F241DE8A2006C85F2 /* SceneDelegate.swift in Sources */,
+				39EB2918242178EE00AFE73F /* RegistrationViewController.swift in Sources */,
+				39DA4DD82423113D00BFA7AD /* CreatePostViewController.swift in Sources */,
+				391B7AEE242411F70028CABB /* SettingsViewController.swift in Sources */,
+				391B7AE42423E00A0028CABB /* StorageService.swift in Sources */,
+				39DA4DDC24231DA700BFA7AD /* BorderView.swift in Sources */,
+				39EB291D24218C4300AFE73F /* User.swift in Sources */,
+				391B7AEC2423E58C0028CABB /* StorageReference+Post.swift in Sources */,
+				391B7AEA2423E53B0028CABB /* UIImage+Size.swift in Sources */,
+				391B7AE82423E2050028CABB /* Post.swift in Sources */,
+				392E93C9242538FC00EFFFDF /* PostDetailsViewController.swift in Sources */,
+				3915046A2425B43400B8904D /* LikeService.swift in Sources */,
+				392E93CF24256D3700EFFFDF /* UploadStatus.swift in Sources */,
+				391B7ADE2423C4510028CABB /* MapViewController.swift in Sources */,
+				392E93CB24253C1000EFFFDF /* Annotation.swift in Sources */,
+				39DA4DDE2423273A00BFA7AD /* PWPhotoHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +670,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3927EF42241DE8A2006C85F2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3927EF43241DE8A2006C85F2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3927EF47241DE8A5006C85F2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -366,7 +731,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +785,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -432,15 +797,19 @@
 		};
 		3927EF64241DE8A5006C85F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B1E7753CED5BCFB5DBE71A5 /* Pods-PriceWatch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S9EVLTX79C;
 				INFOPLIST_FILE = PriceWatch/Info.plist;
+				"INFOPLIST_FILE[sdk=*]" = PriceWatch/Supporting/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.company.PriceWatch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.company.PriceWatchApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -449,15 +818,18 @@
 		};
 		3927EF65241DE8A5006C85F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2FF9C1D7587D02421C3AD34 /* Pods-PriceWatch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PriceWatch/Info.plist;
+				DEVELOPMENT_TEAM = S9EVLTX79C;
+				INFOPLIST_FILE = PriceWatch/Supporting/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.company.PriceWatch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.company.PriceWatchApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -466,6 +838,7 @@
 		};
 		3927EF67241DE8A5006C85F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FE2C14EFDE27630BF6A833B /* Pods-PriceWatchTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +860,7 @@
 		};
 		3927EF68241DE8A5006C85F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CF7785BB8C2BAD362584B84 /* Pods-PriceWatchTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +882,7 @@
 		};
 		3927EF6A241DE8A5006C85F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B1EBDD5842AC1DA9B8F2BA4 /* Pods-PriceWatch-PriceWatchUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +902,7 @@
 		};
 		3927EF6B241DE8A5006C85F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CCDED24805927F32D3631B2 /* Pods-PriceWatch-PriceWatchUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

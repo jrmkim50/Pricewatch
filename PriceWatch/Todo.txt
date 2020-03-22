@@ -1,0 +1,5 @@
+1. Have map show all nearby pins
+2. Click pin to move to post details
+3. Show post details
+4. In settings, see your post titles and have the ability to delete them (delete from posts/uid & post locations)
+5. Upvote???
