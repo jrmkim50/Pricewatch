@@ -28,7 +28,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     var locationManager = CLLocationManager()
     var mapHelper = PWMapHelper()
-    var currentAnnotation: MKPointAnnotation? = nil
+    var currentAnnotation: [MKPointAnnotation] = []
     var tapGestureRecognizer: UITapGestureRecognizer?
     var previousLocation: CLLocation? = nil
 //----------------------------------------------------------------
@@ -47,6 +47,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
 //----------------------------------------------------------------
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
         resultSearchController = UISearchController(searchResultsController: locationSearchTable)
         resultSearchController?.searchResultsUpdater = locationSearchTable
@@ -61,7 +62,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         locationSearchTable.mapView = map
         locationSearchTable.handleMapSearchDelegate = self
 //----------------------------------------------------------------
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     func dropPinZoomIn(placemark:MKPlacemark){
@@ -73,18 +77,20 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let state = placemark.administrativeArea {
             annotation.subtitle = "\(city) \(state)"
         }
-        map.addAnnotation(annotation)
-        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-        let region = MKCoordinateRegion(center: placemark.coordinate, span: span)
-        map.setRegion(region, animated: true)
-        currentAnnotation = annotation
-        searchBar!.isHidden = true
+        if currentAnnotation.count > 0 {
+            currentAnnotation[0].coordinate = annotation.coordinate
+        } else {
+            map.addAnnotation(annotation)
+            let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+            let region = MKCoordinateRegion(center: placemark.coordinate, span: span)
+            map.setRegion(region, animated: true)
+            currentAnnotation.append(annotation)
+            
+        }
     }
     
     func resetMap() {
-        if let currentAnnotation = currentAnnotation {
-            map.removeAnnotation(currentAnnotation)
-        }
+        map.removeAnnotations(currentAnnotation)
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -112,9 +118,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "addPostDetails") {
             if let nextVC = segue.destination as? CreatePostViewController {
-                nextVC.annotation = currentAnnotation
+                nextVC.annotation = currentAnnotation[currentAnnotation.count - 1]
                 resetMap()
-                currentAnnotation = nil
+                currentAnnotation = []
             }
         }
         if (segue.identifier == "seeDetails") {
@@ -132,20 +138,21 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     @objc func addAnnotation(gestureRecognizer: UIGestureRecognizer) {
         let touchPoint = gestureRecognizer.location(in: self.map)
         let coordinate = map.convert(touchPoint, toCoordinateFrom: self.map)
-        if let annotation = currentAnnotation {
-            annotation.coordinate = coordinate
+        if currentAnnotation.count > 0 {
+            currentAnnotation[0].coordinate = coordinate
         } else {
-            let annotation = PointAnnotation()
+            let annotation = MKPointAnnotation()
             annotation.coordinate = coordinate
             annotation.title = ""
             annotation.subtitle = ""
-            currentAnnotation = annotation
+            currentAnnotation.append(annotation)
             map.addAnnotation(annotation)
         }
     }
     
     @IBAction func createPost(_ sender: Any) {
         searchBar!.isHidden = false
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         nextPage.alpha = 1
         cancelButton.alpha = 1
         if (UserService.userOnBoarding()) {
@@ -161,7 +168,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     @IBAction func addPostDetails(_ sender: Any) {
         //set currentAnnotation to nil once post is made
         map.removeGestureRecognizer(tapGestureRecognizer!)
-        if let annotation = currentAnnotation {
+        if currentAnnotation.count > 0 {
             performSegue(withIdentifier: "addPostDetails", sender: self)
         }
         nextPage.alpha = 0
@@ -172,11 +179,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         nextPage.alpha = 0
         cancelButton.alpha = 0
         map.removeGestureRecognizer(tapGestureRecognizer!)
-        if let annotation = currentAnnotation {
-            map.removeAnnotation(annotation)
-            currentAnnotation = nil
+        if currentAnnotation.count > 0 {
+            map.removeAnnotations(currentAnnotation)
+            currentAnnotation = []
         }
         searchBar!.isHidden = true
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

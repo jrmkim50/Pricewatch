@@ -32,6 +32,7 @@
 		392E93CD2425463F00EFFFDF /* MapTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392E93CC2425463F00EFFFDF /* MapTapGestureRecognizer.swift */; };
 		392E93CF24256D3700EFFFDF /* UploadStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392E93CE24256D3700EFFFDF /* UploadStatus.swift */; };
 		39774B8E24272C31005A2FBC /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39774B8D24272C31005A2FBC /* LocationSearchTable.swift */; };
+		39774B9024284AB4005A2FBC /* MapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39774B8F24284AB4005A2FBC /* MapService.swift */; };
 		39DA4DD82423113D00BFA7AD /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DA4DD72423113D00BFA7AD /* CreatePostViewController.swift */; };
 		39DA4DDC24231DA700BFA7AD /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DA4DDB24231DA700BFA7AD /* BorderView.swift */; };
 		39DA4DDE2423273A00BFA7AD /* PWPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DA4DDD2423273A00BFA7AD /* PWPhotoHelper.swift */; };
@@ -112,6 +113,7 @@
 		392E93CC2425463F00EFFFDF /* MapTapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTapGestureRecognizer.swift; sourceTree = "<group>"; };
 		392E93CE24256D3700EFFFDF /* UploadStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadStatus.swift; sourceTree = "<group>"; };
 		39774B8D24272C31005A2FBC /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		39774B8F24284AB4005A2FBC /* MapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapService.swift; sourceTree = "<group>"; };
 		39DA4DD72423113D00BFA7AD /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		39DA4DDB24231DA700BFA7AD /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
 		39DA4DDD2423273A00BFA7AD /* PWPhotoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWPhotoHelper.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				391B7AE32423E00A0028CABB /* StorageService.swift */,
 				391B7AE52423E19E0028CABB /* PostService.swift */,
 				391504692425B43400B8904D /* LikeService.swift */,
+				39774B8F24284AB4005A2FBC /* MapService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				391B7AEC2423E58C0028CABB /* StorageReference+Post.swift in Sources */,
 				391B7AEA2423E53B0028CABB /* UIImage+Size.swift in Sources */,
 				391B7AE82423E2050028CABB /* Post.swift in Sources */,
+				39774B9024284AB4005A2FBC /* MapService.swift in Sources */,
 				392E93C9242538FC00EFFFDF /* PostDetailsViewController.swift in Sources */,
 				3915046A2425B43400B8904D /* LikeService.swift in Sources */,
 				392E93CF24256D3700EFFFDF /* UploadStatus.swift in Sources */,

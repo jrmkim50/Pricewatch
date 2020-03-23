@@ -22,14 +22,6 @@
                                     <action selector="logout:" destination="c9I-cZ-oGh" eventType="touchUpInside" id="Twv-rg-9rc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="W" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTW-NM-bOE">
-                                <rect key="frame" x="133" y="391" width="237" height="265"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="200"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -42,9 +34,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okx-JB-Kyh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2075" y="-952"/>
+            <point key="canvasLocation" x="-2075.36231884058" y="-952.23214285714278"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Home-->
         <scene sceneID="NI5-Zw-EPi">
             <objects>
                 <viewController id="hJU-d4-9NS" customClass="MapViewController" customModule="PriceWatch" customModuleProvider="target" sceneMemberID="viewController">
@@ -153,7 +145,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uzE-e4-KED"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ezl-Fc-yKo"/>
+                    <navigationItem key="navigationItem" title="Home" id="Ezl-Fc-yKo"/>
                     <connections>
                         <outlet property="cancelButton" destination="Pbe-hO-CL4" id="TWo-9a-XJe"/>
                         <outlet property="map" destination="gVL-71-cDJ" id="m9h-zw-y0H"/>
@@ -353,6 +345,15 @@
                                     <constraint firstItem="dbC-Fm-kBc" firstAttribute="leading" secondItem="oe0-rd-acx" secondAttribute="trailing" constant="-240" id="x1i-DO-gRh"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJa-MC-EuR">
+                                <rect key="frame" x="229" y="747" width="165" height="30"/>
+                                <state key="normal" title="Mark For Urgent Review">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="markAsUrgent:" destination="Sj5-Mf-hTF" eventType="touchUpInside" id="tUL-GI-AWa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -362,11 +363,13 @@
                             <constraint firstItem="8E9-Qa-z6w" firstAttribute="trailing" secondItem="sNc-4q-6Bt" secondAttribute="trailing" id="JaJ-4D-T2v"/>
                             <constraint firstItem="E0K-j5-nh9" firstAttribute="leading" secondItem="sNc-4q-6Bt" secondAttribute="leading" id="Lmt-dA-gjS"/>
                             <constraint firstItem="D0z-ja-qt7" firstAttribute="top" secondItem="sNc-4q-6Bt" secondAttribute="top" constant="20" id="OLt-S3-vxt"/>
+                            <constraint firstItem="QJa-MC-EuR" firstAttribute="top" secondItem="oe0-rd-acx" secondAttribute="bottom" constant="3" id="SQD-qb-R5z"/>
                             <constraint firstItem="E0K-j5-nh9" firstAttribute="top" secondItem="D0z-ja-qt7" secondAttribute="bottom" constant="8" id="Ych-lC-16Z"/>
                             <constraint firstItem="8E9-Qa-z6w" firstAttribute="top" secondItem="E0K-j5-nh9" secondAttribute="bottom" constant="-19.5" id="bLV-Jf-EKt"/>
                             <constraint firstItem="8E9-Qa-z6w" firstAttribute="leading" secondItem="sNc-4q-6Bt" secondAttribute="leading" id="e68-KD-i4H"/>
                             <constraint firstItem="E0K-j5-nh9" firstAttribute="trailing" secondItem="sNc-4q-6Bt" secondAttribute="trailing" id="en0-DP-A4O"/>
                             <constraint firstItem="8E9-Qa-z6w" firstAttribute="top" secondItem="E0K-j5-nh9" secondAttribute="bottom" constant="-19.5" id="hf9-9h-mVL"/>
+                            <constraint firstItem="sNc-4q-6Bt" firstAttribute="trailing" secondItem="QJa-MC-EuR" secondAttribute="trailing" constant="20" id="zbu-nT-dZI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sNc-4q-6Bt"/>
                     </view>
@@ -383,13 +386,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HCc-hy-Uuc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1312" y="-952"/>
+            <point key="canvasLocation" x="-1313.0434782608697" y="-952.23214285714278"/>
         </scene>
         <!--Create Post View Controller-->
         <scene sceneID="av7-VB-yN0">
             <objects>
                 <viewController id="W32-fB-yDB" customClass="CreatePostViewController" customModule="PriceWatch" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="J0d-AG-Rps">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="J0d-AG-Rps">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -436,7 +439,7 @@
                                 <rect key="frame" x="20" y="457" width="374" height="29"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pT-4U-RLF">
-                                        <rect key="frame" x="133" y="4" width="109" height="20"/>
+                                        <rect key="frame" x="132.5" y="4" width="109" height="20"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>

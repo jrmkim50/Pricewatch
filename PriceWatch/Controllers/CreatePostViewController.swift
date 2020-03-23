@@ -19,12 +19,13 @@ class CreatePostViewController: UIViewController {
     var annotation: MKPointAnnotation?
     
     let photoHelper = PWPhotoHelper()
-    let placeHolderImage = UIImage(systemName: "photo")
+    var placeHolderImage: UIImage?
     
     var uploadStatus: UploadStatus = UploadStatus()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        placeHolderImage = postImage.image!
         setupToHideKeyboardOnTapOnView()
         setGradientBackground(rgbTop: [70.0, 153.0, 239.0], rgbBottom: [51.0, 116.0, 239.0])
         let padding = UIEdgeInsets(top: 10, left: 20, bottom: 0, right: 5)

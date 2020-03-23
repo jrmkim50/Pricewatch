@@ -15,8 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="qld-BD-7SX">
-                                <rect key="frame" x="-27" y="517" width="339" height="415"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" id="zqJ-cE-rRH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreen logo" translatesAutoresizingMaskIntoConstraints="NO" id="qld-BD-7SX">
+                                <rect key="frame" x="-40" y="481" width="339" height="415"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="339" id="DfD-3v-jDU"/>
                                     <constraint firstAttribute="height" constant="415" id="sSL-AG-zF1"/>
@@ -25,8 +29,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="qld-BD-7SX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-27" id="F3c-pe-mwv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qld-BD-7SX" secondAttribute="bottom" constant="-70" id="rqy-uc-yED"/>
+                            <constraint firstItem="qld-BD-7SX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-40" id="F3c-pe-mwv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qld-BD-7SX" secondAttribute="bottom" constant="-34" id="rqy-uc-yED"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -37,6 +41,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="iTunesArtwork" width="512" height="512"/>
+        <image name="gradient" width="828" height="1641"/>
+        <image name="launchscreen logo" width="952" height="948"/>
     </resources>
 </document>

@@ -9,8 +9,9 @@
 import UIKit
 import Kingfisher
 import GoogleMobileAds
+import MessageUI
 
-class PostDetailsViewController: UIViewController, GADBannerViewDelegate {
+class PostDetailsViewController: UIViewController, GADBannerViewDelegate, MFMailComposeViewControllerDelegate {
 
     var postKey: String?
     var post: Post?
@@ -27,6 +28,7 @@ class PostDetailsViewController: UIViewController, GADBannerViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         likeButton.isUserInteractionEnabled = false
         dislikeButton.isUserInteractionEnabled = false
         setGradientBackground(rgbTop: [70.0, 153.0, 239.0], rgbBottom: [51.0, 116.0, 239.0])
@@ -54,9 +56,8 @@ class PostDetailsViewController: UIViewController, GADBannerViewDelegate {
         })
         
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
-//        addBannerViewToView(bannerView)
-//        bannerView.adUnitID = "ca-app-pub-5286636125505263/1777023785"
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-5286636125505263/1777023785"
+//        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         bannerView.delegate = self
@@ -68,7 +69,9 @@ class PostDetailsViewController: UIViewController, GADBannerViewDelegate {
             self.postUpvotes+=1
             self.post!.upvotes = self.postUpvotes
             self.post!.isLiked = true
+            self.post!.isDisliked = false
             self.likeButton.isUserInteractionEnabled = !(self.post!.isLiked)
+            self.dislikeButton.isUserInteractionEnabled = !(self.post!.isDisliked)
             self.postVote.text = String(self.postUpvotes)
         }
     }
@@ -80,9 +83,30 @@ class PostDetailsViewController: UIViewController, GADBannerViewDelegate {
             self.postUpvotes-=1
             self.post!.upvotes = self.postUpvotes
             self.post!.isDisliked = true
+            self.post!.isLiked = false
+            self.likeButton.isUserInteractionEnabled = !(self.post!.isLiked)
             self.dislikeButton.isUserInteractionEnabled = !(self.post!.isDisliked)
             self.postVote.text = String(self.postUpvotes)
         }
+    }
+    @IBAction func markAsUrgent(_ sender: Any) {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients([""])
+            MapService.determineState(from: post!.latitude, from: post!.longitude) { (state) in
+                let messageText = "PriceWatch will compile daily reports and aims to send these to local officials \n" +
+                                  "State: " + state + "\n" +
+                                  "Report Details: " + self.postDetails.text!
+                mail.setMessageBody(messageText, isHTML: true)
+                self.present(mail, animated: true)
+            }
+        } else {
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
     }
     
     func addBannerViewToView(_ bannerView: GADBannerView) {

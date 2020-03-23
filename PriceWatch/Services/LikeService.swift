@@ -6,11 +6,15 @@ struct LikeService {
         let currentUID = User.current.uid
         guard let key = post.key else { return }
         let likesRef = Database.database().reference().child("upvotes").child(key).child(currentUID)
+        let opposingRef = Database.database().reference().child("downvotes").child(key).child(currentUID)
         likesRef.setValue("true") { (error, _) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
                 return success(false)
             }
+            
+            opposingRef.removeValue(completionBlock: {(_, _) in
+            })
 
             let likeCountRef = Database.database().reference().child("posts").child(key).child("upvotes")
             likeCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
@@ -32,11 +36,15 @@ struct LikeService {
         let currentUID = User.current.uid
         guard let key = post.key else { return }
         let likesRef = Database.database().reference().child("downvotes").child(key).child(currentUID)
+        let opposingRef = Database.database().reference().child("upvotes").child(key).child(currentUID)
         likesRef.setValue("true") { (error, _) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
                 return success(false)
             }
+            
+            opposingRef.removeValue(completionBlock: {(_, _) in
+            })
 
             let likeCountRef = Database.database().reference().child("posts").child(key).child("upvotes")
             likeCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
@@ -68,13 +76,6 @@ struct LikeService {
                 completion(false)
             }
         })
-//        likesRef.queryOrdered(byChild: User.current.uid).queryEqual(toValue: "true").observeSingleEvent(of: .value, with: { (snapshot) in
-//            if let _ = snapshot.value as? [String : String] {
-//                completion(true)
-//            } else {
-//                completion(false)
-//            }
-//        })
     }
     
     static func isPostDisliked(_ post: Post, byCurrentUserWithCompletion completion: @escaping (Bool) -> Void) {
@@ -91,13 +92,6 @@ struct LikeService {
                 completion(false)
             }
         })
-//        likesRef.queryOrdered(byChild: User.current.uid).queryEqual(toValue: "true").observeSingleEvent(of: .value, with: { (snapshot) in
-//            if let _ = snapshot.value as? [String : String] {
-//                completion(true)
-//            } else {
-//                completion(false)
-//            }
-//        })
     }
     
     static func setIsLiked(_ isLiked: Bool, for post: Post, success: @escaping (Bool) -> Void) {
